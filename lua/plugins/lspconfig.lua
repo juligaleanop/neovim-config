@@ -25,7 +25,7 @@ return {
 	      "jsonls",
 	      "vhdl_ls",
 		  "rust_analyzer",
-		  "cmake-language-server",
+		  "cmake",
       },
       automatic_installation = true,
     }

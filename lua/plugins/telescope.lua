@@ -1,13 +1,14 @@
 return {
-	'nvim-telescope/telescope.nvim', tag = '0.1.8',
+	'nvim-telescope/telescope.nvim',
 	dependencies = { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep', 'nvim-treesitter/nvim-treesitter' },
 	opts = function()
 		local builtin = require('telescope.builtin')
-		vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-		vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-		vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-		vim.keymap.set('n', '<leader>ft', builtin.treesitter, {})
---		vim.ketmap.set('n', '<leader>fw', builtin.highlights, {})
-		vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+		vim.keymap.set('n', '<leader>ff', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", {noremap = true})
+		vim.keymap.set('n', '<leader>fg', builtin.live_grep, {noremap = true})
+		vim.keymap.set('n', '<leader>fb', builtin.buffers, {noremap = true})
+		vim.keymap.set('n', '<leader>ft', builtin.treesitter, {noremap = true})
+		vim.keymap.set('n', '<leader>fs', builtin.git_status, {noremap = true})
+		vim.keymap.set('n', '<leader>fw', builtin.highlights, {noremap = true})
+		vim.keymap.set('n', '<leader>fh', builtin.help_tags, {noremap = true})
 	end,
 }

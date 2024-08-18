@@ -32,7 +32,7 @@ return {
 				"jsonls",
 				"vhdl_ls",
 				"rust_analyzer",
-				"cmake-language-server",
+				"cmake",
 			},
 	    max_concurrent_installer = 10,
 		automatic_installation = true,
