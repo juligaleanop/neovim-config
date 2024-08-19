@@ -8,7 +8,7 @@ return {
 		vim.keymap.set('n', '<leader>fb', builtin.buffers, {noremap = true})
 		vim.keymap.set('n', '<leader>ft', builtin.treesitter, {noremap = true})
 		vim.keymap.set('n', '<leader>fs', builtin.git_status, {noremap = true})
-		vim.keymap.set('n', '<leader>fw', builtin.highlights, {noremap = true})
+		vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {noremap = true})
 		vim.keymap.set('n', '<leader>fh', builtin.help_tags, {noremap = true})
 	end,
 }
