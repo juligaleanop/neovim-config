@@ -1,3 +1,10 @@
+local on_attach = function (client, bufnr)
+	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+	
+	--keybinds
+	
+end
+
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
@@ -37,12 +44,14 @@ return {
     end
 
     lspconfig.basedpyright.setup {}
-    lspconfig.clangd.setup {}
 
-    -- lua
+    lspconfig.clangd.setup {
+		cmd = {'clangd', '--query-driver=/usr/lib/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin/*,/usr/bin/*'},
+		on_attach= on_attach,	
+	}
+
     lspconfig.lua_ls.setup {}
 
-    -- json
     lspconfig.jsonls.setup {
       settings = {
         json = {
@@ -54,7 +63,6 @@ return {
       },
     }
     lspconfig.vhdl_ls.setup {}
-    lspconfig.cmake.setup {}
 	lspconfig.rust_analyzer.setup{}
 	lspconfig.cmake.setup{}
   end,

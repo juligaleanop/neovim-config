@@ -6,16 +6,6 @@ return {
     		"nvim-tree/nvim-web-devicons",
   	},
 	opts = function()
-
-		local view = { width = 30 }
-		
-		local swap_then_open_tab = function()
-			local api = require("nvim-tree.api")
-			local node = api.tree.get_node_under_cursor()
-			vim.cmd("wincmd l")
-			api.node.open.tab(node)
-		end
-
 		local api = require("nvim-tree.api")
 
 		-- custom mappings
@@ -30,7 +20,7 @@ return {
 		vim.keymap.set('n', '<leader>eh', api.tree.toggle_help, {})
 	end,
 	config = function()
-		require("nvim-tree").setup {opts}
+		require("nvim-tree").setup({view = { width = 50 }, })
 	end,
 }
 

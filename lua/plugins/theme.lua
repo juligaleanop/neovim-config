@@ -3,11 +3,19 @@ return {
 		"EdenEast/nightfox.nvim",
 		lazy = false,
 		priority = 900,
+		config = function()
+			require("nightfox").setup({
+				palettes = { carbonfox = { bg1 = "#000000",} },
+			})
+		end,
 	},
 	{
-		"iagorrr/noctishc.nvim",
+		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 900,
+		config = function()
+			require("tokyonight").setup({style = "night",})	
+		end,
 	},
 	{
 		"ray-x/aurora",
