@@ -1,3 +1,10 @@
+-- desactivar netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- colores 24-bit
+vim.opt.termguicolors = true
+
 --numero de linea y numerod de linea relativo
 vim.opt.number = true
 vim.opt.relativenumber = false
@@ -9,6 +16,5 @@ vim.opt.ttyfast = true
 vim.opt["tabstop"] = 4
 vim.opt["shiftwidth"] = 4
 
+--integracion a portapapeles
 vim.opt.clipboard = "unnamedplus"
-
-

@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 --guardar archivo actual
 vim.keymap.set("n", "<leader>s", ":w<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>w", ":w<CR>", {noremap = true, silent = true})
 
 --salir, doble q para forzar salida sin guardar
 vim.keymap.set("n", "<leader>q", ":q<CR>", {noremap = true, silent = true})
