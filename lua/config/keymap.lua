@@ -14,6 +14,9 @@ vim.keymap.set({"n", "v"}, "<leader>c", '"+y', {noremap = true, silent = true})
 --pegar desde portapapeles
 vim.keymap.set({"n"}, "<leader>v", '"+p', {noremap = true, silent = true})
 
+--mostrar error
+vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
+
 --por si en una de esas se me cruzan los cables y apreto C-z, soy medio mogolico
 vim.keymap.set({"n"}, "<C-z>", "u", {noremap = true, silent = true})
 

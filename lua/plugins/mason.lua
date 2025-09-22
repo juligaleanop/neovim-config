@@ -20,6 +20,7 @@ end
 
 return {
   "williamboman/mason.nvim",
+  dependencies = { "williamboman/mason-lspconfig.nvim" },
   build = ":MasonUpdate",
   cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate", "MasonUninstallAll"},
   config = function()
@@ -28,9 +29,9 @@ return {
 		    	"lua-language-server",
 	    		"clangd",
 				"stylua",
-				"basedpyright",
+				"pyright",
 				"jsonls",
-				"vhdl_ls",
+				"verible",
 				"rust_analyzer",
 				"cmake",
 			},
