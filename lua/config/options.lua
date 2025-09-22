@@ -12,9 +12,8 @@ vim.opt.relativenumber = false
 --no quiero que <C-z> me cierre el neovim a la fuerza, solo la bindee en modo normal
 vim.opt.ttyfast = true
 
---tabulacion
-vim.opt["tabstop"] = 4
-vim.opt["shiftwidth"] = 4
+--indentacion
+vim.opt.shiftwidth = 4
 
 --integracion a portapapeles
 vim.opt.clipboard = "unnamedplus"
