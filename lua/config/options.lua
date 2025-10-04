@@ -13,6 +13,7 @@ vim.opt.relativenumber = false
 vim.opt.ttyfast = true
 
 --indentacion
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
 --integracion a portapapeles

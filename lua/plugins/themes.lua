@@ -5,7 +5,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("nightfox").setup({
-				palettes = { carbonfox = { bg1 = "#101010",} },
+				palettes = { carbonfox = { bg1 = "#101010" } },
 			})
 		end,
 	},
