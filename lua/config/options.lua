@@ -18,3 +18,5 @@ vim.opt.shiftwidth = 4
 
 --integracion a portapapeles
 vim.opt.clipboard = "unnamedplus"
+
+vim.o.winborder = "rounded"
