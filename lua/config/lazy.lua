@@ -18,4 +18,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ spec = { import = "plugins" }, checker = { enabled = true } })
 
-vim.cmd([[colorscheme carbonfox]])
+vim.cmd([[colorscheme onedark_dark]])
