@@ -27,7 +27,7 @@ return {
 		-- See :h blink-cmp-config-keymap for defining your own keymap
 		keymap = { preset = "default",
 
-		['<Tab>'] = {'accept', 'fallback'},
+		['<CR>'] = {'accept', 'fallback'},
 		['<C-c>'] = {'fallback'}
 		},
 

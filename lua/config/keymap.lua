@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 --guardar archivo actual
 vim.keymap.set("n", "<leader>s", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
@@ -10,7 +8,6 @@ vim.keymap.set("n", "<leader>qq", ":q!<CR>", { noremap = true, silent = true })
 
 --copiar a portapapeles
 vim.keymap.set({ "n", "v" }, "<leader>c", '"+y', { noremap = true, silent = true })
-
 --pegar desde portapapeles
 vim.keymap.set({ "n" }, "<leader>v", '"+p', { noremap = true, silent = true })
 
@@ -22,4 +19,12 @@ vim.keymap.set("n", "<leader>f", "<cmd>lua vim.lsp.buf.format({async = true})<CR
 --por si en una de esas se me cruzan los cables y apreto C-z, soy medio mogolico
 vim.keymap.set({ "n" }, "<C-z>", "u", { noremap = true, silent = true })
 
+--split
 vim.keymap.set("n", "<leader>ww", ":vsplit<CR>", { noremap = true, silent = true })
+
+--snippets
+local ls = require("luasnip")
+
+vim.keymap.set({"i"}, "<C-E>", function() ls.expand_or_jump() end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-R>", function() ls.jump(-1) end, {silent = true})
+

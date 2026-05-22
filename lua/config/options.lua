@@ -20,3 +20,7 @@ vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 
 vim.o.winborder = "rounded"
+
+--leaders
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","

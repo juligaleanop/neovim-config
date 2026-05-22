@@ -14,6 +14,8 @@ return {
 			"verible",
 			"rust_analyzer",
 			"cmake",
+			"texlab",
+			"asm_lsp",
 		},
 		automatic_installation = true,
 	},

@@ -9,3 +9,5 @@ return {
 		require("nvim-autopairs").setup(opts)
 	end,
 }
+
+
