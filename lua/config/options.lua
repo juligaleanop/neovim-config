@@ -24,3 +24,11 @@ vim.o.winborder = "rounded"
 --leaders
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
+
+vim.filetype.add({
+    extension = {
+        s = "asm",
+        S = "asm",
+        asm = "asm",
+    },
+})
