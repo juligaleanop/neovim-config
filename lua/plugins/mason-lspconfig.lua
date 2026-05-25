@@ -2,7 +2,6 @@ return {
 	"mason-org/mason-lspconfig.nvim",
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = {} },
-		"neovim/nvim-lspconfig",
 	},
 	opts = {
 		ensure_installed = {
@@ -43,11 +42,12 @@ return {
 					"--background-index",
 					"--clang-tidy",
 				},
+				filetypes = { "c", "cpp", "objc", "objcpp" },
 			},
 			asm_lsp = {
 				cmd = {"asm-lsp"},
 				filetypes = {"asm"},
-				root_markers = {".git", ".asm-lsp.toml"},
+				root_markers = {".git", ".gitignore", ".asm-lsp.toml"},
 			},
 			pyright = {},
 			jsonls = {},
